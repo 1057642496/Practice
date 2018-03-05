@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="wuqing.theone.MainActivity">
+
+    <!--标题栏-->
+    <include layout="@layout/toolbar_layout"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--主要的内容-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/rg_tab_bar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_channel"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_channel"
+                    android:text="@string/tab_menu_alert"/>
+
+                <RadioButton
+                    android:id="@+id/rb_message"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_message"
+                    android:text="@string/tab_menu_profile"/>
+
+                <RadioButton
+                    android:id="@+id/rb_better"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_better"
+                    android:text="@string/tab_menu_pay"/>
+
+                <RadioButton
+                    android:id="@+id/rb_setting"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/tab_menu_setting"
+                    android:text="@string/tab_menu_setting"/>
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/div_tab_bar"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_above="@id/rg_tab_bar"
+                android:background="@color/div_white"/>
+
+            <FrameLayout
+                android:id="@+id/ly_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/div_tab_bar"
+                >
+
+            </FrameLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <!--侧滑的部分-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu"
+            >
+
+        </android.support.design.widget.NavigationView>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

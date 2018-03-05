@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Demo.iml" filepath="$PROJECT_DIR$/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo-/Demo-.iml" filepath="$PROJECT_DIR$/Demo-/Demo-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DrawerLayoutTest/DrawerLayoutTest.iml" filepath="$PROJECT_DIR$/DrawerLayoutTest/DrawerLayoutTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExpandableListViewDemo/ExpandableListViewDemo.iml" filepath="$PROJECT_DIR$/ExpandableListViewDemo/ExpandableListViewDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FragmentDemo4/FragmentDemo4.iml" filepath="$PROJECT_DIR$/FragmentDemo4/FragmentDemo4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FragmentDemo5/FragmentDemo5.iml" filepath="$PROJECT_DIR$/FragmentDemo5/FragmentDemo5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thenewdemo/thenewdemo.iml" filepath="$PROJECT_DIR$/thenewdemo/thenewdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/theone/theone.iml" filepath="$PROJECT_DIR$/theone/theone.iml" />
+    </modules>
+  </component>
+</project>

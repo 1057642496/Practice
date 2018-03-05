@@ -1,0 +1,1 @@
+include ':app', ':myapplication', ':thenewdemo', ':theone', 'ExpandableListViewDemo', 'FragmentDemo4', 'FragmentDemo5', 'DrawerLayoutTest', ':Demo-'

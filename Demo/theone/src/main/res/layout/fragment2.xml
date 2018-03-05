@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/table_title"
+                layout="@layout/table_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <wuqing.theone.table.ListViewForScrollView
+                android:id="@+id/ly_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#B4B3B3"
+                android:dividerHeight="1.0dip"
+                android:scrollbars="none">
+            </wuqing.theone.table.ListViewForScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_ascending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="升序"/>
+
+                <Button
+                    android:id="@+id/btn_descending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="降序"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

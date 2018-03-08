@@ -150,8 +150,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 mListViewForScrollView.setAdapter(adapter);
                 break;
             case R.id.sort_descending_order:
-                Collections.reverse(list);
+
                 mListViewForScrollView.setAdapter(adapter);
+                Collections.reverse(list);
                 break;
             default:
                 break;

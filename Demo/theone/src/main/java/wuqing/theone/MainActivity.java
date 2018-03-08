@@ -3,6 +3,8 @@ package wuqing.theone;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -38,12 +41,12 @@ import wuqing.theone.wuqing.theone.exlist.Item;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Toolbar toolbar;
-    private DrawerLayout mDrawerLayout;
-    private NavigationView navView;
+    private boolean isExit = false;//点击退出时给定的一个布尔值
+    private Toolbar toolbar;//标题栏
+    private DrawerLayout mDrawerLayout;//抽屉布局
+    private NavigationView navView;//导航视图
 
-
-    private RadioGroup radioGroup;
+    private RadioGroup radioGroup;//底部导航栏的选项组
     private RadioButton button_1;
     private RadioButton button_2;
     private RadioButton button_3;
@@ -63,9 +66,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final int PAGE_THREE = 2;
     public static final int PAGE_FOUR = 3;
     List<Fragment> list;
-    private FrameLayout frameLayout;
+    private FrameLayout frameLayout; //屏幕中间的框架内容
 
 
+
+    //这时负责双列表的
     private ArrayList<Group> gData = null;
     private ArrayList<ArrayList<Item>> iData = null;
     private ArrayList<Item> lData = null;
@@ -228,6 +233,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 if (toolbar != null) {
                     toolbar.setTitle("提醒");//设置标题为提醒
+
                 }
                 break;
             case R.id.rb_message:
@@ -380,5 +386,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
+    /**
+     * @param keyCode
+     * @param event   实现点击两下退出程序的作用
+     * @return
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (!isExit) {
+                isExit = true;
+                Toast.makeText(MainActivity.this, "再按一次退出", Toast.LENGTH_SHORT).show();
+                mHandler.sendEmptyMessageDelayed(0, 2000);
+            } else {
+                System.exit(0);
+            }
+            return false;
+
+        }
+
+        return onKeyDown(keyCode, event);
+    }
+
+    Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
 }
